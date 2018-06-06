@@ -7,8 +7,6 @@ var h = sumSeconds/3600 ^ 0 ;
 var m = (sumSeconds-h*3600)/60 ^ 0;
 var s = sumSeconds-h*3600-m*60;
 
-var time = ""
-
 var timeH = ["час", "часа", "часов"];
 var timeM = ["минута", "минуты", "минут"];
 var timeS = ["секунда", "секунды", "секунд"];
