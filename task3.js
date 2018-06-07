@@ -1,6 +1,9 @@
 var chislo1 = process.argv[2],
     chislo2 = process.argv[3];
 
+if (chislo2 === undefined)
+  chislo2 = 0;
+
 var sumSeconds = +chislo1 + +chislo2;
 
 var h = sumSeconds/3600 ^ 0 ;
