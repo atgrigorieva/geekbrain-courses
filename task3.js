@@ -37,11 +37,16 @@ else{
             console.log(m + " " + TimeN(m, timeM) + " " + s + " " + TimeN(s, timeS));
           }
           else{
+            if(h < 1 && m > 0 && s < 1){
+               console.log(m + " " + TimeN(m, timeM));
+            }
+            else{
             console.log(s + " " + TimeN(s, timeS));
           }
         }
-      }
+       }
     }
+  }
 }
 
 
