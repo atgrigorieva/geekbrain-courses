@@ -6,25 +6,42 @@ if (chislo2 === undefined)
 
 var sumSeconds = +chislo1 + +chislo2;
 
-var h = sumSeconds/3600 ^ 0 ;
+var h = sumSeconds/3600 ^ 0;
 var m = (sumSeconds-h*3600)/60 ^ 0;
 var s = sumSeconds-h*3600-m*60;
+
 
 var timeH = ["час", "часа", "часов"];
 var timeM = ["минута", "минуты", "минут"];
 var timeS = ["секунда", "секунды", "секунд"];
 
-
-if(h > 0 && m > 0 && s > 0){
-  console.log(h + " " + TimeN(h, timeH) + " " + m + " " + TimeN(m, timeM) + " " + s + " " + TimeN(s, timeS));
+if(h > 0 && m === 0 && s === 0){
+  console.log(h + " " + TimeN(h, timeH));
 }
 else{
-  if(h < 1 && (m > 0 && s > 0)){
-    console.log(m + " " + TimeN(m, timeM) + " " + s + " " + TimeN(s, timeS));
+  if(h > 0 && m > 0 && s === 0){
+    console.log(h + " " + TimeN(h, timeH) + " " + m + " " + TimeN(m, timeM));
   }
   else{
-    console.log(s + " " + TimeN(s, timeS));
-  }
+    if(h > 0 && m === 0 && s > 0)
+    {
+      console.log(h + " " + TimeN(h, timeH) + " " + s + " " + TimeN(s, timeS));
+    }
+    else{
+
+      if(h > 0 && m >= 0 && s >= 0){
+          console.log(h + " " + TimeN(h, timeH) + " " + m + " " + TimeN(m, timeM) + " " + s + " " + TimeN(s, timeS));
+        }
+      else{
+          if(h < 1 && m > 0 && s > 0){
+            console.log(m + " " + TimeN(m, timeM) + " " + s + " " + TimeN(s, timeS));
+          }
+          else{
+            console.log(s + " " + TimeN(s, timeS));
+          }
+        }
+      }
+    }
 }
 
 
